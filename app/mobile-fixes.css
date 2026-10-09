@@ -1,0 +1,37 @@
+.ops-topbar > div:first-child { min-width: 0; }
+.ops-topbar > div:last-child { flex: none; min-width: 0; }
+.connection-button { white-space: nowrap; flex: none; }
+
+@media (max-width: 560px) {
+  .ops-topbar {
+    height: 76px;
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .ops-topbar > div:first-child { overflow: hidden; }
+
+  .ops-topbar h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .connection-button {
+    display: grid !important;
+    place-items: center;
+    width: 46px !important;
+    min-width: 46px !important;
+    height: 46px;
+    padding: 0 !important;
+    border-radius: 14px;
+    overflow: visible;
+    box-shadow: 0 8px 24px rgba(15, 200, 74, .28);
+  }
+
+  .connection-button::after {
+    content: "W" !important;
+    font-size: 15px !important;
+    font-weight: 900;
+  }
+}

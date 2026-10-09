@@ -1,0 +1,22 @@
+.ai-onboarding-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+
+.ai-onboarding-actions button {
+  border: 1px solid #304057;
+  background: #111923;
+  color: #9eb5c9;
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.ai-onboarding-actions button:last-child {
+  background: #0d3b1e;
+  border-color: #159a42;
+  color: #54e77d;
+}

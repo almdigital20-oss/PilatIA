@@ -1,0 +1,186 @@
+/*
+ * PilatIA visual foundation (v2)
+ * Official references: design-references/*-approved.png.png
+ *
+ * This layer is intentionally isolated. Only elements inside `.pia-ui` or
+ * carrying a `pia-*` class receive these styles, so the current production UI
+ * remains unchanged while screens migrate incrementally.
+ */
+
+:root {
+  --pia-canvas: #070c12;
+  --pia-sidebar: #091019;
+  --pia-surface: #0d1620;
+  --pia-surface-raised: #111c28;
+  --pia-surface-hover: #162331;
+  --pia-border: #213142;
+  --pia-border-strong: #2d4054;
+  --pia-text: #f5f8fb;
+  --pia-text-soft: #a4b3c2;
+  --pia-text-muted: #718398;
+  --pia-brand: #13d55a;
+  --pia-brand-hover: #20e46a;
+  --pia-brand-soft: rgba(19, 213, 90, .12);
+  --pia-success: #13d55a;
+  --pia-info: #2f9cf4;
+  --pia-warning: #f4a51c;
+  --pia-purple: #a85df4;
+  --pia-danger: #f15b68;
+  --pia-radius-sm: 8px;
+  --pia-radius-md: 12px;
+  --pia-radius-lg: 16px;
+  --pia-radius-xl: 20px;
+  --pia-shadow: 0 16px 42px rgba(0, 0, 0, .18);
+  --pia-space-1: 4px;
+  --pia-space-2: 8px;
+  --pia-space-3: 12px;
+  --pia-space-4: 16px;
+  --pia-space-5: 20px;
+  --pia-space-6: 24px;
+  --pia-space-8: 32px;
+  --pia-space-10: 40px;
+  --pia-control-height: 42px;
+  --pia-transition: 160ms ease;
+}
+
+.pia-ui {
+  color-scheme: dark;
+  min-height: 100%;
+  background: var(--pia-canvas);
+  color: var(--pia-text);
+  font-family: var(--font-geist-sans), Inter, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pia-ui :where(button, input, textarea, select) { font: inherit; }
+.pia-ui :where(button, a) { -webkit-tap-highlight-color: transparent; }
+.pia-ui :where(button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--pia-brand);
+  outline-offset: 2px;
+}
+
+.pia-eyebrow {
+  color: var(--pia-brand);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.pia-title { margin: 0; color: var(--pia-text); font-size: 28px; font-weight: 700; letter-spacing: -.035em; }
+.pia-subtitle { margin: 4px 0 0; color: var(--pia-text-soft); font-size: 14px; }
+.pia-muted { color: var(--pia-text-muted); }
+
+.pia-card {
+  background: linear-gradient(145deg, rgba(17, 28, 40, .98), rgba(12, 21, 31, .98));
+  border: 1px solid var(--pia-border);
+  border-radius: var(--pia-radius-lg);
+  box-shadow: var(--pia-shadow);
+}
+
+.pia-card--flat { box-shadow: none; }
+.pia-card--interactive { transition: border-color var(--pia-transition), transform var(--pia-transition), background var(--pia-transition); }
+.pia-card--interactive:hover { background: var(--pia-surface-raised); border-color: var(--pia-border-strong); transform: translateY(-1px); }
+
+.pia-button {
+  min-height: var(--pia-control-height);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pia-space-2);
+  border: 1px solid transparent;
+  border-radius: var(--pia-radius-md);
+  padding: 0 var(--pia-space-5);
+  color: var(--pia-text);
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--pia-transition), border-color var(--pia-transition), transform var(--pia-transition);
+}
+
+.pia-button:hover { transform: translateY(-1px); }
+.pia-button:disabled { opacity: .48; cursor: not-allowed; transform: none; }
+.pia-button--primary { background: var(--pia-brand); color: #03140a; box-shadow: 0 9px 24px rgba(19, 213, 90, .16); }
+.pia-button--primary:hover { background: var(--pia-brand-hover); }
+.pia-button--secondary { background: var(--pia-surface-raised); border-color: var(--pia-border-strong); }
+.pia-button--secondary:hover { background: var(--pia-surface-hover); }
+.pia-button--ghost { color: var(--pia-text-soft); }
+.pia-button--danger { color: #ffdce0; background: rgba(241, 91, 104, .12); border-color: rgba(241, 91, 104, .28); }
+.pia-button--icon { width: var(--pia-control-height); padding: 0; }
+
+.pia-field { display: grid; gap: var(--pia-space-2); }
+.pia-field > span { color: var(--pia-text-soft); font-size: 12px; font-weight: 600; }
+.pia-input {
+  width: 100%;
+  min-height: var(--pia-control-height);
+  border: 1px solid var(--pia-border-strong);
+  border-radius: var(--pia-radius-md);
+  padding: 0 var(--pia-space-4);
+  background: #09121c;
+  color: var(--pia-text);
+  transition: border-color var(--pia-transition), box-shadow var(--pia-transition);
+}
+.pia-input::placeholder { color: var(--pia-text-muted); }
+.pia-input:hover { border-color: #40556a; }
+textarea.pia-input { min-height: 112px; padding-block: var(--pia-space-3); resize: vertical; }
+
+.pia-badge {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 3px 9px;
+  background: var(--pia-brand-soft);
+  color: #55e884;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pia-badge--info { background: rgba(47, 156, 244, .12); color: #6cbaff; }
+.pia-badge--warning { background: rgba(244, 165, 28, .13); color: #ffc253; }
+.pia-badge--purple { background: rgba(168, 93, 244, .13); color: #ca91ff; }
+.pia-badge--danger { background: rgba(241, 91, 104, .13); color: #ff929d; }
+
+.pia-status-dot { width: 8px; height: 8px; display: inline-block; border-radius: 50%; background: var(--pia-brand); box-shadow: 0 0 0 4px var(--pia-brand-soft); }
+
+.pia-divider { height: 1px; border: 0; background: var(--pia-border); }
+.pia-stack { display: grid; gap: var(--pia-space-4); }
+.pia-cluster { display: flex; align-items: center; gap: var(--pia-space-3); flex-wrap: wrap; }
+
+.pia-skeleton {
+  overflow: hidden;
+  background: var(--pia-surface-raised);
+  border-radius: var(--pia-radius-sm);
+  position: relative;
+}
+.pia-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent);
+  animation: pia-shimmer 1.4s infinite;
+}
+@keyframes pia-shimmer { to { transform: translateX(100%); } }
+
+.pia-empty-state { padding: var(--pia-space-10); text-align: center; color: var(--pia-text-soft); }
+.pia-empty-state strong { display: block; margin-bottom: var(--pia-space-2); color: var(--pia-text); font-size: 16px; }
+
+.pia-alert { border: 1px solid var(--pia-border); border-radius: var(--pia-radius-md); padding: var(--pia-space-4); background: var(--pia-surface); color: var(--pia-text-soft); }
+.pia-alert--success { background: rgba(19,213,90,.08); border-color: rgba(19,213,90,.28); color: #8eefac; }
+.pia-alert--warning { background: rgba(244,165,28,.08); border-color: rgba(244,165,28,.28); color: #ffd17a; }
+.pia-alert--danger { background: rgba(241,91,104,.08); border-color: rgba(241,91,104,.28); color: #ffabb3; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pia-ui *, .pia-ui *::before, .pia-ui *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+@media (max-width: 720px) {
+  .pia-ui { font-size: 15px; }
+  .pia-title { font-size: 24px; }
+  .pia-button { min-height: 46px; }
+  .pia-input { min-height: 46px; font-size: 16px; }
+}

@@ -1,0 +1,86 @@
+/* Readability layer for the operations dashboard at 100% browser zoom. */
+.ops-shell{font-size:14px;line-height:1.4}
+.ops-brand small,.ops-account small{font-size:10px}
+.ops-account strong{font-size:11px}
+.ops-sidebar nav p{font-size:9px}
+.ops-sidebar nav button{font-size:13px}
+.ops-sidebar nav button i{font-size:15px}
+.ops-sidebar nav button b{font-size:10px}
+
+.ops-topbar>div:first-child>span,.section-hero span,.card-title>div>span,.chat-list-head span,.contacts-v2 header,.identity-preview+label{font-size:9px}
+.ops-topbar p{font-size:11px}
+.section-hero p{font-size:11px}
+.card-title h2{font-size:16px}
+.card-title button,.card-title>b{font-size:10px}
+.save-button{font-size:11px}
+
+.ops-filterbar button,.ops-filterbar>span{font-size:10px}
+.metric-grid span{font-size:11px}
+.metric-grid small{font-size:10px}
+.funnel-bars span{font-size:10px}
+.priority>button strong,.queue-row strong{font-size:11px}
+.priority>button small,.queue-row small{font-size:9px}
+
+.ai-grid article>label,.composer-card>label{font-size:10px}
+.ai-grid textarea,.composer-card textarea,.settings-form input,.settings-form textarea,.custom-questions input{font-size:12px;line-height:1.5}
+.identity-preview p{font-size:11px}
+.guardrails>span,.automation-strip>span{font-size:9px}
+.guardrails b,.automation-strip b{font-size:11px}
+.guardrails small,.automation-strip small{font-size:9px}
+
+.search-field input{font-size:11px}
+.chat-tabs button{font-size:9px}
+.conversation-list strong{font-size:11px}
+.conversation-list small{font-size:9px;line-height:1.35}
+.conversation-list em,.conversation-list time{font-size:8px}
+.chat-room>header strong{font-size:12px}
+.chat-room>header small{font-size:9px}
+.mode{font-size:10px}
+.mode-banner{font-size:9px;line-height:1.45}
+.message{padding:11px 13px}
+.message small{font-size:9px}
+.message p{font-size:14px;line-height:1.55}
+.message time{font-size:8px}
+.chat-room>footer textarea{font-size:12px;line-height:1.45}
+.chat-room>footer button{font-size:12px}
+.contact-profile h3{font-size:15px}
+.contact-profile p{font-size:10px}
+.contact-profile span{font-size:9px}
+.contact-actions button{font-size:9px}
+.contact-data>span{font-size:9px}
+.contact-data>p{font-size:11px;line-height:1.65}
+.contact-data dl>div{font-size:9px}
+
+.crm-tools select,.crm-tools input[type=date],.crm-tools>button,.agenda-toolbar>button,.agenda-toolbar>div button{font-size:10px}
+.kanban-col>header span{font-size:11px}
+.kanban-col article strong{font-size:10px}
+.kanban-col article small,.kanban-col article>p,.kanban-col article footer em,.kanban-col article footer button,.drop-hint{font-size:9px}
+.week-labels span{font-size:9px}
+.month-grid>div>b{font-size:10px}
+.month-grid>div>button{font-size:9px}
+.reminders-card>span,.reminders-card i{font-size:9px}
+.reminders-card p{font-size:10px}
+.appointment-row>time strong,.appointment-row>span strong{font-size:11px}
+.appointment-row>time span,.appointment-row>span small,.appointment-row>em,.appointment-row>div:last-child button{font-size:9px}
+
+.segment-card>button strong{font-size:11px}
+.segment-card>button small{font-size:9px}
+.template-row button{font-size:9px}
+.broadcast-summary span,.broadcast-summary small{font-size:10px}
+.contacts-tools span{font-size:10px}
+.contacts-v2>div{font-size:10px}
+.contacts-v2>div>span:last-child button{font-size:9px}
+.qualification-row strong{font-size:11px}
+.qualification-row small,.qualification-row em{font-size:9px}
+.custom-questions>p,.add-question{font-size:10px}
+.connections-grid h3{font-size:13px}
+.connections-grid p{font-size:10px}
+.connections-grid em,.connections-grid article>button{font-size:9px}
+.form-v2 label{font-size:10px}
+.switch-row strong{font-size:11px}
+.switch-row small,.settings-form .card-title em,.schedule-v2 label,.schedule-summary{font-size:9px}
+
+@media(max-width:850px){
+  .ops-sidebar nav button{font-size:0}
+  .message p{font-size:13px}
+}

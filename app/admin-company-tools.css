@@ -1,0 +1,8 @@
+.company-name-input{font-weight:800;color:#fff!important;margin-bottom:5px}
+.client-actions .danger{border-color:#73343b!important;color:#ff8990!important;background:#2a1519!important}
+.client-actions .danger:hover{background:#411c22!important}
+.client-actions button:disabled{opacity:.45;cursor:not-allowed}
+.unlimited-plan{display:flex;align-items:flex-start;gap:10px;margin:15px 20px 4px;padding:13px;border:1px solid #256d3b;border-radius:10px;background:#0b2916;color:#8eeaac;font-size:10px;font-weight:700;line-height:1.4}
+.unlimited-plan input{accent-color:#19d456;margin-top:1px}
+.connection-limit{display:block;margin-top:9px;color:#7890a8;font-size:8px;line-height:1.35}
+.connection-limit input{display:block;width:72px!important;margin-top:5px!important;padding:6px 8px!important;color:#fff!important;background:#0e151e!important;border:1px solid #34445a!important;border-radius:7px!important}

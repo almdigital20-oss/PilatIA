@@ -1,0 +1,80 @@
+.contact-import-rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0d2518;
+  border: 1px solid #1d6b39;
+  border-radius: 11px;
+  padding: 12px 14px;
+  color: #9bb1c5;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.contact-import-explainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.contact-import-explainer > div {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border: 1px solid #2a4054;
+  border-radius: 11px;
+  background: #101a25;
+}
+
+.contact-import-explainer b { color: #f3f7fb; font-size: 9px; }
+.contact-import-explainer span { color: #8ea3b7; font-size: 8px; line-height: 1.55; }
+.contact-import-explainer .import-result {
+  grid-column: 1 / -1;
+  border-color: #208047;
+  background: #0d2518;
+}
+.contact-import-explainer .import-result b,
+.contact-import-explainer .import-result strong { color: #39e574; }
+
+.contact-import-rule b {
+  flex: none;
+  color: #37e672;
+}
+
+.contact-only-badge {
+  display: inline-block !important;
+  background: #2b2512 !important;
+  color: #f0c85d !important;
+  border-radius: 8px !important;
+  padding: 5px 7px !important;
+  font-size: 7px !important;
+  font-style: normal !important;
+}
+
+.contacts-v2 > div > span:last-child {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.contacts-v2 > div > span:last-child button {
+  white-space: nowrap;
+}
+
+.contact-view-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.contact-view-tabs button { border: 1px solid #2c4055; border-radius: 9px; background: #0d1723; color: #9eb2c6; padding: 8px 11px; }
+.contact-view-tabs button.active { border-color: #24d768; background: #0d2b1a; color: #eafff0; }
+.contact-view-tabs b { margin-left: 5px; color: #36df71; }
+.student-badge { display: inline-block !important; background: #102c22 !important; color: #62e5ab !important; border: 1px solid #236d52; border-radius: 8px !important; padding: 5px 7px !important; font-size: 7px !important; font-style: normal !important; }
+.student-toggle.active { border-color: #28785a !important; color: #6ce6ad !important; }
+
+@media (max-width: 700px) {
+  .contact-import-explainer { grid-template-columns: 1fr; }
+  .contact-import-explainer .import-result { grid-column: auto; }
+  .contact-import-rule {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

@@ -1,0 +1,248 @@
+/* PilatIA v2 — global authenticated shell only. */
+
+.ops-shell.pia-ui {
+  --pia-sidebar-width: 252px;
+  min-height: 100vh;
+  display: flex;
+  background:
+    radial-gradient(circle at 70% -20%, rgba(31, 93, 133, .08), transparent 35%),
+    var(--pia-canvas);
+  color: var(--pia-text);
+}
+
+.ops-shell.pia-ui .ops-sidebar {
+  width: var(--pia-sidebar-width);
+  padding: 22px 14px 18px;
+  background: linear-gradient(180deg, #09111a 0%, #080e15 100%);
+  border-right: 1px solid var(--pia-border);
+  box-shadow: 18px 0 50px rgba(0, 0, 0, .12);
+}
+
+.ops-shell.pia-ui .ops-brand {
+  min-height: 66px;
+  gap: 12px;
+  padding: 3px 10px 22px;
+}
+
+.ops-shell.pia-ui .ops-brand > div {
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #20e46a, #0bc84d);
+  color: #03160a;
+  font-size: 22px;
+  box-shadow: 0 0 0 1px rgba(48, 255, 121, .16), 0 10px 30px rgba(19, 213, 90, .14);
+}
+
+.ops-shell.pia-ui .ops-brand strong {
+  color: var(--pia-text);
+  font-size: 22px;
+  letter-spacing: -.045em;
+}
+
+.ops-shell.pia-ui .ops-brand small {
+  margin-top: 1px;
+  color: var(--pia-text-muted);
+  font-size: 10px;
+}
+
+.ops-shell.pia-ui .ops-sidebar nav {
+  margin: 0 -3px;
+  padding: 0 3px 10px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pia-border-strong) transparent;
+}
+
+.ops-shell.pia-ui .ops-sidebar nav p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 11px 7px;
+  color: #5d7187;
+  font-size: 9px;
+  letter-spacing: .17em;
+}
+
+.ops-shell.pia-ui .ops-sidebar nav p::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #172433;
+}
+
+.ops-shell.pia-ui .ops-sidebar nav button {
+  height: 45px;
+  gap: 12px;
+  margin: 3px 0;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  color: #9fb0c2;
+  font-size: 13px;
+  transition: color var(--pia-transition), background var(--pia-transition), border-color var(--pia-transition);
+}
+
+.ops-shell.pia-ui .ops-sidebar nav button:hover {
+  background: #111d29;
+  border-color: #1c2c3d;
+  color: #eef6ff;
+}
+
+.ops-shell.pia-ui .ops-sidebar nav button.active {
+  position: relative;
+  background: linear-gradient(90deg, rgba(19, 213, 90, .12), rgba(38, 63, 78, .32));
+  border-color: rgba(54, 112, 83, .28);
+  color: #fff;
+  box-shadow: inset 0 1px rgba(255,255,255,.02);
+}
+
+.ops-shell.pia-ui .ops-sidebar nav button.active::before {
+  content: "";
+  position: absolute;
+  inset: 9px auto 9px -4px;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: var(--pia-brand);
+  box-shadow: 0 0 16px rgba(19,213,90,.45);
+}
+
+.ops-shell.pia-ui .ops-sidebar nav button i {
+  width: 20px;
+  color: #87a0b8;
+  font-size: 15px;
+}
+
+.ops-shell.pia-ui .ops-sidebar nav button.active i { color: var(--pia-brand); }
+.ops-shell.pia-ui .ops-sidebar nav button b {
+  min-width: 22px;
+  height: 22px;
+  border-radius: 8px;
+  background: #c8f45b;
+  color: #0a1c0f;
+  font-size: 10px;
+}
+
+.ops-shell.pia-ui .ops-sidebar nav em.online { background: var(--pia-brand); box-shadow: 0 0 0 4px var(--pia-brand-soft); }
+.ops-shell.pia-ui .ops-sidebar nav em.offline { background: var(--pia-danger); box-shadow: 0 0 0 4px rgba(241,91,104,.1); }
+
+.ops-shell.pia-ui .ops-account {
+  min-height: 66px;
+  margin-top: auto;
+  padding: 15px 8px 0;
+  border-top: 1px solid var(--pia-border);
+}
+
+.ops-shell.pia-ui .ops-account > div {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #152638;
+  color: var(--pia-brand);
+  font-size: 10px;
+}
+
+.ops-shell.pia-ui .ops-account strong { color: #eef5fb; font-size: 11px; }
+.ops-shell.pia-ui .ops-account small { color: var(--pia-text-muted); font-size: 9px; }
+.ops-shell.pia-ui .ops-account button {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  transition: background var(--pia-transition);
+}
+.ops-shell.pia-ui .ops-account button:hover { background: rgba(241, 91, 104, .1); }
+
+.ops-shell.pia-ui .ops-content {
+  width: calc(100% - var(--pia-sidebar-width));
+  margin-left: var(--pia-sidebar-width);
+  background: transparent;
+}
+
+.ops-shell.pia-ui .ops-topbar {
+  min-height: 96px;
+  height: auto;
+  padding: 18px 34px;
+  background: rgba(7, 12, 18, .88);
+  border-bottom: 1px solid var(--pia-border);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.ops-shell.pia-ui .ops-topbar > div:first-child > span {
+  color: var(--pia-brand);
+  font-size: 9px;
+  letter-spacing: .16em;
+}
+
+.ops-shell.pia-ui .ops-topbar h1 {
+  margin: 6px 0 5px;
+  color: var(--pia-text);
+  font-size: 27px;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.ops-shell.pia-ui .ops-topbar p { color: var(--pia-text-soft); font-size: 11px; }
+.ops-shell.pia-ui .ops-topbar > div:last-child { align-items: center; gap: 10px; }
+
+.ops-shell.pia-ui :is(.icon-button, .notification-bell, .connection-button) {
+  min-height: var(--pia-control-height);
+  border-radius: var(--pia-radius-md);
+  transition: background var(--pia-transition), border-color var(--pia-transition), transform var(--pia-transition);
+}
+
+.ops-shell.pia-ui :is(.icon-button, .notification-bell) {
+  width: var(--pia-control-height);
+  border: 1px solid var(--pia-border-strong);
+  background: var(--pia-surface);
+  color: var(--pia-text-soft);
+}
+
+.ops-shell.pia-ui :is(.icon-button, .notification-bell):hover {
+  background: var(--pia-surface-hover);
+  border-color: #40556a;
+  color: var(--pia-text);
+}
+
+.ops-shell.pia-ui .connection-button {
+  min-width: 190px;
+  padding: 0 18px;
+  border: 1px solid var(--pia-brand);
+  background: var(--pia-brand);
+  color: #03160a;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 10px 26px rgba(19,213,90,.15);
+}
+
+.ops-shell.pia-ui .connection-button:hover { background: var(--pia-brand-hover); transform: translateY(-1px); }
+.ops-shell.pia-ui .ops-page { max-width: 1680px; padding: 26px 34px 54px; }
+
+@media (max-width: 1050px) {
+  .ops-shell.pia-ui { --pia-sidebar-width: 82px; }
+  .ops-shell.pia-ui .ops-sidebar { padding-inline: 10px; }
+  .ops-shell.pia-ui .ops-brand { justify-content: center; padding-inline: 0; }
+  .ops-shell.pia-ui .ops-brand span,
+  .ops-shell.pia-ui .ops-sidebar nav p,
+  .ops-shell.pia-ui .ops-sidebar nav button span,
+  .ops-shell.pia-ui .ops-sidebar nav button b,
+  .ops-shell.pia-ui .ops-account span,
+  .ops-shell.pia-ui .ops-account button { display: none; }
+  .ops-shell.pia-ui .ops-sidebar nav button { justify-content: center; padding: 0; }
+  .ops-shell.pia-ui .ops-sidebar nav button.active::before { left: -11px; }
+  .ops-shell.pia-ui .ops-account { justify-content: center; padding-inline: 0; }
+}
+
+@media (max-width: 620px) {
+  .ops-shell.pia-ui { --pia-sidebar-width: 68px; }
+  .ops-shell.pia-ui .ops-sidebar { padding: 13px 7px; }
+  .ops-shell.pia-ui .ops-brand > div { width: 42px; height: 42px; font-size: 20px; }
+  .ops-shell.pia-ui .ops-topbar { min-height: 78px; padding: 13px 14px; }
+  .ops-shell.pia-ui .ops-topbar h1 { max-width: 45vw; overflow: hidden; font-size: 21px; text-overflow: ellipsis; white-space: nowrap; }
+  .ops-shell.pia-ui .ops-topbar p,
+  .ops-shell.pia-ui .ops-topbar > div:first-child > span,
+  .ops-shell.pia-ui .icon-button { display: none; }
+  .ops-shell.pia-ui .connection-button { min-width: 44px; width: 44px; padding: 0; font-size: 0; }
+  .ops-shell.pia-ui .connection-button::after { content: "W"; font-size: 12px; }
+  .ops-shell.pia-ui .ops-page { padding: 16px 14px 40px; }
+}

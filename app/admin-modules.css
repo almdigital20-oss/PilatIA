@@ -1,0 +1,29 @@
+.plan-modules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.plan-modules > span {
+  width: 100%;
+  color: #48e778;
+  font-size: 7px;
+  letter-spacing: 1.2px;
+}
+
+.plan-modules label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #101821;
+  border: 1px solid #2c3c50;
+  border-radius: 7px;
+  padding: 6px 8px;
+  color: #95abc0;
+  font-size: 7px;
+}
+
+.plan-modules input {
+  accent-color: #18d957;
+}

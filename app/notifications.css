@@ -1,0 +1,16 @@
+.notification-bell{position:relative;width:40px;height:40px;border:1px solid #304057;border-radius:11px;background:#121b27;color:#fff;cursor:pointer}
+.notification-bell b{position:absolute;right:-5px;top:-5px;min-width:18px;height:18px;padding:0 4px;border-radius:10px;background:#19d75a;color:#07170c;display:grid;place-items:center;font-size:8px}
+.notifications-panel{position:fixed;z-index:55;right:24px;top:72px;width:min(390px,calc(100vw - 30px));max-height:70vh;overflow:auto;background:#131d29;border:1px solid #34465c;border-radius:14px;box-shadow:0 20px 60px #0009;padding:10px}
+.notifications-panel>header{display:flex;justify-content:space-between;align-items:center;padding:10px;color:#37df70;font-size:8px;letter-spacing:1.3px;font-weight:800}
+.notifications-panel>header button{border:0;background:transparent;color:#93a8bb;font-size:20px}
+.notifications-panel article{display:flex;gap:12px;padding:14px;border-top:1px solid #29384b}
+.notifications-panel article>i{width:34px;height:34px;border-radius:10px;background:#103322;display:grid;place-items:center;font-style:normal}
+.notifications-panel article>div{flex:1}.notifications-panel strong,.notifications-panel small{display:block}.notifications-panel strong{font-size:11px}.notifications-panel p{margin:6px 0;color:#a5b8c9;font-size:9px;line-height:1.55}.notifications-panel small{color:#657e95;font-size:7px}
+.notifications-empty{padding:30px;text-align:center;color:#7d93a8;font-size:9px}
+@media(max-width:560px){.notifications-panel{right:15px;top:66px}.notification-bell{width:38px;height:38px}}
+.handoff-notifications{display:grid;gap:8px;padding:14px;border-bottom:1px solid #26384a}
+.handoff-notifications>strong{color:#55f58b;font-size:11px;letter-spacing:.12em}
+.handoff-notifications button{width:100%;display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:10px;padding:11px;border:1px solid #28523d;border-radius:10px;background:#0d231a;color:#eefbf3;text-align:left;cursor:pointer}
+.handoff-notifications button span{display:grid;gap:3px}.handoff-notifications button small{color:#9eb8aa;font-size:11px}.handoff-notifications button em{color:#55f58b;font-style:normal;font-size:12px}
+.enable-alerts{margin:12px 14px 4px;padding:10px 12px;border:1px solid #2d6d49;border-radius:9px;background:transparent;color:#55f58b;cursor:pointer}
+.mode-banner.handoff{border-color:#9a6d1c;background:#251c0b;color:#ffd780}
